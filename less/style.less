@@ -1,0 +1,53 @@
+@import "lesshat";
+
+
+#SVG-Logo {
+  display: block;
+  width: 80%;
+  fill: #000;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  margin: auto;
+}
+
+.cssanimations {
+  @draw-duration: 4.75s;
+  @draw-delay: .5s;
+  
+  @fade-duration: 3s;
+  @fade-delay: 2.5s;
+
+  @fill-duration: 2.75s;
+  @fill-delay: 3s;
+  
+  .st1 {
+    fill-opacity: 0;
+    stroke-width: 2px;
+    stroke: #000;
+    stroke-miterlimit: 5;
+    
+    stroke-dashArray: 762.7672729492188; //1100;
+    stroke-dashoffset: 762.7672729492188; //1100;
+   
+    animation-fill-mode: forwards;
+    animation-iteration: 1;
+    
+    animation-name: DrawLine, FadeStroke, FillIn;
+    animation-duration: @draw-duration,@fade-duration, @fill-duration;
+    animation-delay: @draw-delay, @fade-delay, @fill-delay;
+  }
+}
+
+@keyframes DrawLine {
+  100% { stroke-dashOffset: 0; }
+}
+
+@keyframes FadeStroke {
+  to { stroke-opacity: 0; }
+}
+ 
+@keyframes FillIn {
+  0% { fill-opacity: 0; }
+  100% { fill-opacity: 1; }
+}
+

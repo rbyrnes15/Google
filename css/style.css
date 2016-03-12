@@ -1,0 +1,57 @@
+/* Stage */
+#stage {
+  background: white;
+  height: 500px;
+  width: 600px;
+}
+
+
+.v {
+  animation: ants 10s 2s;
+  stroke: red;
+  
+  fill: white;
+}
+
+
+.v,
+.c,
+.d {
+  animation: ants 10s 2s;
+  stroke: red;
+  
+  fill: white;
+}
+
+
+.line {
+  stroke: darkblue;
+  stroke-dasharray: 505;
+  stroke-dashoffset: 505;
+
+/* call animation */
+animation: lines 2s 1s forwards;
+}
+
+@keyframes lines {
+ 
+  100% { 
+    stroke-dashoffset: 0;
+  }
+}
+
+
+
+.boat{
+  fill: #cc0020;
+  animation: bounce 2s infinite;
+}
+
+
+
+
+
+
+
+
+
